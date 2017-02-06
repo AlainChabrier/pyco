@@ -24,7 +24,6 @@ class DesignSession:
 
     def solve(self):
         self.url = self.baseUrl + self.designSession["user"] + "/refineDesignSession?solve=true&&onCloud=true"
-        # data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
         jsonvalue = self.designSession
         #to_json()
         response =  requests.post(self.url, json = jsonvalue)
@@ -37,7 +36,6 @@ class DesignSession:
 
     def refine(self):
         self.url = self.baseUrl + self.designSession["user"] + "/refineDesignSession?solve=false"
-        # data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
         jsonvalue = self.designSession
         #to_json()
         response =  requests.post(self.url, json = jsonvalue)
