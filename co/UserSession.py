@@ -2,7 +2,8 @@ import requests
 import json
 import ExcelDataSet
 import JSONDataset
-import requests
+import DesignSession
+import Intent
 
 #SAXO_URL = "https://saxoliberty.mybluemix.net/rest/saxoservice/"
 #SAXO_URL = "http://localhost:9080/rest/saxoservice/"
@@ -17,7 +18,7 @@ class UserSession:
 
     def __init__(self, user, password):
         self.user = user
-        saelf.a = requests.get("http.www.google.com")
+        self.a = requests.get("http.www.google.com")
         self.password = password
         self.url = self.baseUrl + "login?user=python&password=python"
         response = requests.get(self.url)
