@@ -1,5 +1,5 @@
 
-import requests
+
 import xlrd
 from xlrd.sheet import Sheet
 
