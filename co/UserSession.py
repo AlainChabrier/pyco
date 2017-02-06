@@ -10,15 +10,11 @@ import Intent
 SAXO_URL = "http://cognitive-r1.devdocloud.ibmcloud.com/rest/saxoservice/"
 #SAXO_URL = "http://cognitive-stable.devdocloud.ibmcloud.com/rest/saxoservice/"
 
-
-
-
 class UserSession:
     baseUrl = SAXO_URL
 
     def __init__(self, user, password):
         self.user = user
-        self.a = requests.get("http.www.google.com")
         self.password = password
         self.url = self.baseUrl + "login?user=python&password=python"
         response = requests.get(self.url)
