@@ -16,6 +16,7 @@ class UserSession:
 
     def __init__(self, user, password):
         self.user = user
+        saelf.a = requests.get("http.www.google.com")
         self.password = password
         self.url = self.baseUrl + "login?user=python&password=python"
         response = requests.get(self.url)
