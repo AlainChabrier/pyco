@@ -1,6 +1,7 @@
+import requests
 import json
 from IPython.core.display import HTML
-import requests
+
 
 class DesignSession:
     def __init__(self, userSession, data):

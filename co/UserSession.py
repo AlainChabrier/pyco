@@ -1,5 +1,6 @@
-import json
 import requests
+import json
+
 
 #SAXO_URL = "https://saxoliberty.mybluemix.net/rest/saxoservice/"
 #SAXO_URL = "http://localhost:9080/rest/saxoservice/"
