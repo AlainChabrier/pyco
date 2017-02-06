@@ -5,6 +5,8 @@ from xlrd.sheet import Sheet
 
 import json
 
+import Table
+
 class ExcelDataSet:
     def __init__(self, location):
         self.location = location

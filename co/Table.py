@@ -1,5 +1,8 @@
 import json
 
+import xlrd
+from xlrd.sheet import Sheet
+
 class Table:
      def __init__(self, data):
          self.data = data
