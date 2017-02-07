@@ -1,6 +1,6 @@
 import requests
 import json
-import Decision
+from co.Decision import Decision
 from IPython.core.display import HTML
 
 
