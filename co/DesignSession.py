@@ -1,6 +1,8 @@
 import requests
 import json
 from co.Decision import Decision
+from co.Constraint import Constraint
+from co.Goal import Goal
 from IPython.core.display import HTML
 
 
