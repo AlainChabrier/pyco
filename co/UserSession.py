@@ -29,7 +29,11 @@ class UserSession:
             print "UserSession login FAILED"
             #response.raise_for_status()
 
-
+    def newDataset(self, name):
+        data = {}
+        data['name'] = name
+        data['tables'] = {}
+        return JSONDataset(data)
 
     def uploadDataset(self, datasetname, dataset):
         if (isinstance(dataset, ExcelDataSet) or isinstance(dataset, JSONDataset)):

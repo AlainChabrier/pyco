@@ -1,11 +1,6 @@
 import json
 
 class JSONDataset:
-    def __init__(self):
-        self.data = {}
-        self.data['name'] = 'unnamed'
-        self.data['tables'] = {}
-
     def __init__(self, data):
         self.data = data
 
@@ -16,6 +11,7 @@ class JSONDataset:
         self.data['name'] = name
 
     def addTable(self, tableName, rows):
+        self.data['tables'][tableName] = {}
         self.data['tables'][tableName]['rows'] = rows
 
     def to_json(self):
