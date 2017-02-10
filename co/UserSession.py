@@ -92,5 +92,13 @@ class UserSession:
         if (response.ok):
             print "UserSession getDataset SUCCESS"
             return JSONDataset(json.loads(response.content)["datasetContent"])
-            
-            
+
+    def getDatasets(self):
+        self.url = self.baseUrl + self.user + "/datasets"
+        response = requests.get(self.url)
+        if (response.ok):
+            print "UserSession getDatasets SUCCESS"
+            datasets = []
+            for record in json.loads(response.content)["records"]:
+                datasets.append(record['dataset'])
+            return datasets
